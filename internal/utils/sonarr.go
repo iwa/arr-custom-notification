@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func sonarrMessage(eventType string) (string, error) {
+func SonarrMessage(eventType string) (string, error) {
 	var message string
 
 	switch eventType {
