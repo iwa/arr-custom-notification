@@ -18,7 +18,7 @@ type TelegramMessage struct {
 	ProtectContent      bool   `json:"protect_content"`
 }
 
-func sendTelegramMessage(chatId, botToken, message string) error {
+func SendTelegramMessage(chatId, botToken, message string) error {
 	payload := TelegramMessage{
 		ChatID:              chatId,
 		Text:                message,
