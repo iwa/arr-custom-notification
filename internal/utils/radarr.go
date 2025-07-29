@@ -37,6 +37,9 @@ func RadarrMessage(eventType string) string {
 			message = fmt.Sprintf("<b>🟠💔 Radarr - Health Error</b>\n%s\n%s", os.Getenv("radarr_health_issue_level"), os.Getenv("radarr_health_issue_message"))
 		}
 
+	case "HealthRestored":
+		message = fmt.Sprintf("<b>🟠💚 Radarr - Health Restored</b>\n%s\n%s", os.Getenv("radarr_health_issue_level"), os.Getenv("radarr_health_issue_message"))
+
 	case "ApplicationUpdate":
 		message = fmt.Sprintf("<b>🟠🔧 Radarr - Update</b>\n<code>%s -> %s</code>\n%s", os.Getenv("radarr_update_previousversion"), os.Getenv("radarr_update_newversion"), os.Getenv("radarr_update_message"))
 

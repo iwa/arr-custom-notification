@@ -57,6 +57,9 @@ func SonarrMessage(eventType string) string {
 			message = fmt.Sprintf("<b>🔵💔 Sonarr - Health Error</b>\n%s\n%s", os.Getenv("sonarr_health_issue_type"), os.Getenv("sonarr_health_issue_message"))
 		}
 
+	case "HealthRestored":
+		message = fmt.Sprintf("<b>🔵💚 Sonarr - Health Restored</b>\n%s\n%s", os.Getenv("sonarr_health_issue_type"), os.Getenv("sonarr_health_issue_message"))
+
 	case "ApplicationUpdate":
 		message = fmt.Sprintf("<b>🔵🔧 Sonarr - Update</b>\n<code>%s -> %s</code>\n%s", os.Getenv("sonarr_update_previousversion"), os.Getenv("sonarr_update_newversion"), os.Getenv("sonarr_update_message"))
 
